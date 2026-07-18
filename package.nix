@@ -12,7 +12,7 @@ let
     hash = source.sha256;
   };
   pname = "elegoo-slicer";
-  version = source.version;
+  inherit (source) version;
 
   appimageContents = pkgs.appimageTools.extract { inherit pname version src; };
 
