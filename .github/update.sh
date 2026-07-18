@@ -12,7 +12,7 @@ entries=$tmp/entries.jsonl
 out=$tmp/sources.json
 
 curl -fsSL "$api" > "$release"
-version=$(jq -r .tag_name "$release")
+version=$(jq -r '.tag_name | ltrimstr("v")' "$release")
 : > "$entries"
 
 jq -c '.assets[] | {name, url: .browser_download_url}' "$release" |

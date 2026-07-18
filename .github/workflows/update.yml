@@ -21,4 +21,4 @@ jobs:
         with:
           commit_message: "chore: update sources to ${{ steps.version.outputs.version }}"
           file_pattern: sources.json
-          tagging_message: ${{ steps.version.outputs.version }}
+          tagging_message: v${{ steps.version.outputs.version }}
