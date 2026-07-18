@@ -4,12 +4,18 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    git-hooks = {
+      url = "github:cachix/git-hooks.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
     {
+      self,
       nixpkgs,
       flake-utils,
+      git-hooks,
       ...
     }:
     let
@@ -27,7 +33,21 @@
           source = sources.${system};
         };
 
-        formatter = pkgs.nixfmt;
+        formatter = pkgs.nixfmt-tree;
+
+        checks.git-hooks = git-hooks.lib.${system}.run {
+          src = ./.;
+          hooks = {
+            nixfmt.enable = true;
+            statix.enable = true;
+            deadnix.enable = true;
+          };
+        };
+
+        devShells.default = pkgs.mkShell {
+          inherit (self.checks.${system}.git-hooks) shellHook;
+          packages = self.checks.${system}.git-hooks.enabledPackages;
+        };
       }
     );
 }
