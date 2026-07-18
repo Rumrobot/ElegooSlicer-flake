@@ -8,9 +8,9 @@
 
   outputs =
     {
-      self,
       nixpkgs,
       flake-utils,
+      ...
     }:
     let
       supportedSystems = [ "x86_64" ];
@@ -26,6 +26,8 @@
         packages.default = pkgs.callPackage ./package.nix {
           source = sources.${system};
         };
+
+        formatter = pkgs.nixfmt;
       }
     );
 }
