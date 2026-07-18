@@ -46,7 +46,11 @@
 
         devShells.default = pkgs.mkShell {
           inherit (self.checks.${system}.git-hooks) shellHook;
-          packages = self.checks.${system}.git-hooks.enabledPackages;
+          packages =
+            self.checks.${system}.git-hooks.enabledPackages
+            ++ (with pkgs; [
+              go-task
+            ]);
         };
       }
     );
