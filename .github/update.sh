@@ -42,3 +42,4 @@ jq -s 'add' "$entries" > "$out"
 jq -e 'length > 0' "$out" > /dev/null
 
 mv "$out" sources.json
+cat sources.json
