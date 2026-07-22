@@ -11,7 +11,11 @@ release=$tmp/release.json
 entries=$tmp/entries.jsonl
 out=$tmp/sources.json
 
-curl -fsSL "$api" > "$release"
+if [ -n "${GITHUB_TOKEN:-}" ]; then
+  curl -fsSL -H "Authorization: Bearer $GITHUB_TOKEN" "$api" > "$release"
+else
+  curl -fsSL "$api" > "$release"
+fi
 version=$(jq -r '.tag_name | ltrimstr("v")' "$release")
 : > "$entries"
 
