@@ -65,7 +65,7 @@ pkgs.appimageTools.wrapType2 rec {
 
   meta = {
     description = "G-code generator for ELEGOO 3D printers (OrcaSlicer fork)";
-    homepage = "https://github.com/ELEGOO-3D/ElegooSlicer";
+    homepage = "https://github.com/elegoo-repo/ElegooSlicer";
     license = lib.licenses.agpl3Only;
     mainProgram = "elegoo-slicer";
     platforms = [ "x86_64-linux" ];

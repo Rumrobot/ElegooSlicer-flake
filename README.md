@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Built with Nix](https://img.shields.io/badge/built%20with-nix-5277C3?logo=nixos&logoColor=white)](https://nixos.org)
 
-A Nix flake that packages the official [ElegooSlicer](https://github.com/ELEGOO-3D/ElegooSlicer) AppImage releases for `x86_64-linux`.
+A Nix flake that packages the official [ElegooSlicer](https://github.com/elegoo-repo/ElegooSlicer) AppImage releases for `x86_64-linux`.
 
 Versions are automatically updated daily.
 

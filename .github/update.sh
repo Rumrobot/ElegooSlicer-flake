@@ -3,7 +3,7 @@ set -eu
 
 cd "$(dirname "$0")/.."
 
-api=https://api.github.com/repos/ELEGOO-3D/ElegooSlicer/releases/latest
+api=https://api.github.com/repos/elegoo-repo/ElegooSlicer/releases/latest
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT INT TERM
 
