@@ -56,7 +56,7 @@ pkgs.appimageTools.wrapType2 rec {
   '';
 
   extraInstallCommands = ''
-    install -Dm444 ${appimageContents}/ElegooSlicer.desktop $out/share/applications/elegoo-slicer.desktop
+    install -Dm444 ${appimageContents}/com.orcaslicer.ElegooSlicer.desktop $out/share/applications/elegoo-slicer.desktop
     install -Dm444 ${appimageContents}/usr/share/icons/hicolor/192x192/apps/ElegooSlicer.png \
       $out/share/icons/hicolor/192x192/apps/ElegooSlicer.png
     substituteInPlace $out/share/applications/elegoo-slicer.desktop \
