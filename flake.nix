@@ -10,35 +10,31 @@
     };
   };
 
-  outputs =
-    {
-      self,
-      nixpkgs,
-      flake-utils,
-      git-hooks,
-      ...
-    }:
-    let
-      supportedSystems = [ "x86_64" ];
-      linuxSystems = map (arch: "${arch}-linux") supportedSystems;
-      sources = builtins.fromJSON (builtins.readFile ./sources.json);
-    in
+  outputs = {
+    self,
+    nixpkgs,
+    flake-utils,
+    git-hooks,
+    ...
+  }: let
+    supportedSystems = ["x86_64"];
+    linuxSystems = map (arch: "${arch}-linux") supportedSystems;
+    sources = builtins.fromJSON (builtins.readFile ./sources.json);
+  in
     flake-utils.lib.eachSystem linuxSystems (
-      system:
-      let
+      system: let
         pkgs = nixpkgs.legacyPackages.${system};
-      in
-      {
+      in {
         packages.default = pkgs.callPackage ./package.nix {
           source = sources.${system};
         };
 
-        formatter = pkgs.nixfmt-tree;
+        formatter = pkgs.alejandra;
 
         checks.git-hooks = git-hooks.lib.${system}.run {
           src = ./.;
           hooks = {
-            nixfmt.enable = true;
+            alejandra.enable = true;
             statix.enable = true;
             deadnix.enable = true;
           };

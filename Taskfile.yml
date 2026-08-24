@@ -4,7 +4,7 @@ tasks:
   format:
     desc: Format code
     cmds:
-      - nix fmt
+      - nix fmt .
 
   fix:
     desc: Fix lint issues
