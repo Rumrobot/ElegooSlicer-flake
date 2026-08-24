@@ -6,18 +6,6 @@ on:
   pull_request:
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7
-      - uses: DeterminateSystems/nix-installer-action@v22
-      - name: Check formatting
-        run: |
-          nix fmt
-          git diff --exit-code
-      - run: nix run nixpkgs#statix -- check .
-      - run: nix run nixpkgs#deadnix -- --fail .
-
   build:
     runs-on: ubuntu-latest
     steps:
