@@ -63,7 +63,7 @@ in
 
     meta = {
       description = "G-code generator for ELEGOO 3D printers (OrcaSlicer fork)";
-      homepage = "https://github.com/elegoo-repo/ElegooSlicer";
+      homepage = "https://github.com/elegooofficial/ElegooSlicer";
       license = lib.licenses.agpl3Only;
       mainProgram = "elegoo-slicer";
       platforms = ["x86_64-linux"];
