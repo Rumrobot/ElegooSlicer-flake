@@ -23,7 +23,7 @@
     includes = [];
   };
 in
-  pkgs.appimageTools.wrapType2 rec {
+  pkgs.appimageTools.wrapType2 {
     inherit pname version src;
 
     extraPkgs = pkgs:
