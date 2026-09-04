@@ -1,17 +1,17 @@
 {
   "x86_64-linux": {
-    "version": "1.5.3.4",
-    "url": "https://github.com/elegooofficial/ElegooSlicer/releases/download/v1.5.3.4/ElegooSlicer_Linux_V1.5.3.4.AppImage",
-    "sha256": "sha256-X3ox1tpXAPddm2qgyBNajP/bIQr9fw61neeTAQTFsyM="
+    "version": "1.5.3.5",
+    "url": "https://github.com/elegooofficial/ElegooSlicer/releases/download/v1.5.3.5/ElegooSlicer_Linux_V1.5.3.5.AppImage",
+    "sha256": "sha256-ezs/CODQ1Ru0cshYZdG+mwwoOFQj2rocsMOyJdAQGvw="
   },
   "aarch64-darwin": {
-    "version": "1.5.3.4",
-    "url": "https://github.com/elegooofficial/ElegooSlicer/releases/download/v1.5.3.4/ElegooSlicer_Mac_arm64_V1.5.3.4.dmg",
-    "sha256": "sha256-wZwphZr/Fkjc1MxMVUJZtQeVFLRs7QmN0JH6q9VVt3g="
+    "version": "1.5.3.5",
+    "url": "https://github.com/elegooofficial/ElegooSlicer/releases/download/v1.5.3.5/ElegooSlicer_Mac_arm64_V1.5.3.5.dmg",
+    "sha256": "sha256-L/nbnTmK9VJzj0R61jcQ1hQHtppxQEVyONFQfJeLXZ8="
   },
   "x86_64-darwin": {
-    "version": "1.5.3.4",
-    "url": "https://github.com/elegooofficial/ElegooSlicer/releases/download/v1.5.3.4/ElegooSlicer_Mac_x86_64_V1.5.3.4.dmg",
-    "sha256": "sha256-5jThQiBmIzvac1vcG1A7dmqnpLx7o1b5wNUTmNxrQXU="
+    "version": "1.5.3.5",
+    "url": "https://github.com/elegooofficial/ElegooSlicer/releases/download/v1.5.3.5/ElegooSlicer_Mac_x86_64_V1.5.3.5.dmg",
+    "sha256": "sha256-EgRn0vYf8e1LCFpPBi7lJAQeEnOKbuMtpbr1OhqUPZw="
   }
 }
